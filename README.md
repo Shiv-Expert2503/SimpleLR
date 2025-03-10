@@ -11,6 +11,13 @@
 #### X and y must be of same length
 #### length of X and y must not be 0
 #### X should contain more than 1 unique value as if not then it will generate the 0 division error while calculating value of m in fit function. As while calculating m the denominator will become 0
+
+------------------------------------------
+SLR is failing for 
+
+X = [5, 5, 5, 5]  
+y = [30, 35, 40, 45]
+------------------------------------------
 #### Therefore Enhanced SLR came into picture
 ### Approach for EnhancedSLR
 1. Added check for length of x and y
