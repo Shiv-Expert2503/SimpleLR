@@ -22,3 +22,8 @@ y = [30, 35, 40, 45]
 ### Approach for EnhancedSLR
 1. Added check for length of x and y
 2. Added check that x must have more than 1 unique value
+
+-----------------------------------------
+# Multi Linear Regression
+### Approach
+1. Solved the matrix equation for the n dependent variables under fit function, which would return beta vector at the end.
