@@ -27,3 +27,4 @@ y = [30, 35, 40, 45]
 # Multi Linear Regression
 ### Approach
 1. Solved the matrix equation for the n dependent variables under fit function, which would return beta vector at the end.
+2. Now in predict function just return the y_pred using Y=(beta)X+Error(Residuals)
