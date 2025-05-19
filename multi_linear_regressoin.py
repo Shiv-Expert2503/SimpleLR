@@ -90,7 +90,18 @@ class MyLinearRegression:
         if self.beta is None:
             raise ValueError("Model has not been fitted yet.")
         return self.beta
+    
 
+    def calculate_vif(self, X:list[list[float]]) -> dict:
+        X = np.array(X)
+        vif = []
+        for i in range(X.shape[1]):
+            # Regress feature i against all other features
+            mask = [j for j in range(X.shape[1]) if j != i]
+            beta = MyLinearRegression().fit(X[:, mask], X[:, i]).beta
+            r_squared = self.score(X[:, i], X[:, mask] @ beta[1:] + beta[0])
+            vif.append(1./(1. - r_squared))
+        return np.array(vif)
 
 
 # Sample data
